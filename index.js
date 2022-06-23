@@ -1,6 +1,5 @@
 const express = require("express");
 const { json } = require("express");
-const models = require("./models/Flight.json");
 const routes = require("./routes/flightRoute");
 
 const app = express();

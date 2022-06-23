@@ -1,10 +1,8 @@
 const Flights = require("../models/Flight.json");
 const fs = require("fs");
-const { response } = require("express");
+const {v4: uuid} = require("uuid");
 
-/* flight id(fid), date and time constants */
-const fid = (() => ((id = 1), () => id++))();
-
+/* flight current date and time constants */
 const currentDate = new Date();
 const currentDayOfMonth = currentDate.getDate();
 const currentMonth = currentDate.getMonth();
@@ -26,7 +24,7 @@ exports.addFlight = async (request, response) => {
     const { title, price } = await request.body;
 
     var flight = {
-      id: fid(),
+      id: uuid(),
       title,
       time: current_time,
       price,
@@ -94,7 +92,7 @@ exports.updateFlight = async (request, response) => {
     console.log(selectedId);
     console.log(flights);
   } catch (err) {
-    response.status(500).json({ message: err.message });
+    response.status(500).json({ message: "flight not found" });
   }
 };
 
@@ -106,8 +104,8 @@ exports.deleteFlight = async (request, response) => {
       return String(flight.id) == id;
     });
     flights.splice(flights.indexOf(flight), 1);
-    response.status(200).json({ message: "User deleted", flight });
+    response.status(200).json({ message: "flight deleted", flight });
   } catch (err) {
-    response.status(500).json({ message: err.message });
+    response.status(400).json({ message: "flight not found" });
   }
 };

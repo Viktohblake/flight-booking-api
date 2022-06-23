@@ -1,3 +1,37 @@
 [
-  
+  {
+    "id": "7df23420-d0a4-4e32-ab00-cdc76646e29d",
+    "title": "Flight to Lagos, Nigeria",
+    "time": "9:20 PM",
+    "price": 25000,
+    "date": "23-6-2022"
+  },
+  {
+    "id": "ddb69162-0b92-4ac4-919a-cb594bf09626",
+    "title": "Flight to Dubai",
+    "time": "9:20 PM",
+    "price": 55000,
+    "date": "23-6-2022"
+  },
+  {
+    "id": "6044f7af-7cd7-4497-b8b6-1418b8626d73",
+    "title": "Flight to FCT Abuja",
+    "time": "9:20 PM",
+    "price": 15000,
+    "date": "23-6-2022"
+  },
+  {
+    "id": "2ddf38b2-9afa-444f-8e64-7d3a6ed9f3ed",
+    "title": "Flight to Texas",
+    "time": "9:20 PM",
+    "price": 95000,
+    "date": "23-6-2022"
+  },
+  {
+    "id": "bcd7bbac-158a-472c-9f1c-de361ca1ce6a",
+    "title": "Flight to Miami",
+    "time": "9:20 PM",
+    "price": 95000,
+    "date": "23-6-2022"
+  }
 ]
